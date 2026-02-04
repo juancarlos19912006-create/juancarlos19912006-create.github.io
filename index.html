@@ -45,7 +45,7 @@ re<!DOCTYPE html>
             </div>
             <div class="card">
                 <h3>IES LEONARDO DA VINCI</h3>
-                <img src="https://www.facebook.com/iesleonardodavinciAB/" alt="LeonardoDaVinci">
+                <img src="https://www.iesleonardodavinci.com/index.php/component/content/article?id=60">
                 <p>Estudio Grado Superior de Desarrollo de Aplicaciones Multiplataforma.</p>
             </div>
         </div>
@@ -122,6 +122,16 @@ body {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+
+    /* Ajuste de las imágenes dentro de las tarjetas */
+.card img {
+    width: 100%;          /* Que ocupe todo el ancho de la card */
+    height: 200px;        /* Altura fija para que todas sean iguales */
+    object-fit: cover;    /* Recorta la imagen para que llene el espacio sin deformarse */
+    border-radius: 4px;   /* Un toque estético para las esquinas */
+    display: block;       /* Evita espacios extra en la base */
+    margin-bottom: 15px;  /* Separa la imagen del texto de abajo */
+}
 }
 
 .card {
