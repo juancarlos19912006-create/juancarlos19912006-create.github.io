@@ -151,4 +151,84 @@ body {
     padding: 15px;
     margin-top: 40px;
 }
+    /* ===== ANIMACIONES GENERALES ===== */
+
+/* Fade in + slide */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header animado al cargar */
+.header {
+    animation: fadeUp 1s ease-out;
+}
+
+/* Secciones con animación */
+.section {
+    animation: fadeUp 1s ease-out;
+}
+
+/* ===== NAV MODERNA ===== */
+
+.nav a {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* Subrayado animado */
+.nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #00adb5;
+    transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* ===== TARJETAS DE PROYECTOS ===== */
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Elevación al pasar el ratón */
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Zoom suave en imágenes */
+.card img {
+    transition: transform 0.4s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* ===== BOTONES / LINKS ===== */
+
+a {
+    transition: color 0.3s ease;
+}
+
+/* ===== FOOTER SUAVE ===== */
+
+.footer {
+    animation: fadeUp 1.2s ease-out;
+}
+
 </style>
