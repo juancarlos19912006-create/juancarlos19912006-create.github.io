@@ -3,451 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juan Carlos Abietar | Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* ===== ESTILOS GENERALES ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Arial, sans-serif;
-        }
-
-        body {
-            background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #00adb5);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-            color: #333;
-            scroll-behavior: smooth;
-        }
-
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* ===== HEADER Y NAV ===== */
-        .header {
-            background: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(10px);
-            color: #fff;
-            text-align: center;
-            padding: 60px 20px;
-            animation: fadeUp 1s ease-out;
-        }
-
-        .nav {
-            background-color: rgba(34, 34, 34, 0.9);
-            text-align: center;
-            padding: 15px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            position: relative;
-        }
-
-        .nav a::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -5px;
-            width: 0%;
-            height: 2px;
-            background-color: #00adb5;
-            transition: width 0.3s ease;
-        }
-
-        .nav a:hover::after { width: 100%; }
-
-        /* ===== SECCIONES ===== */
-        .section {
-            padding: 60px 20px;
-            max-width: 1000px;
-            margin: 40px auto;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 15px;
-            animation: fadeUp 1s ease-out;
-        }
-
-        .section h2 {
-            margin-bottom: 25px;
-            color: #00adb5;
-        }
-
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* ===== TARJETAS DE PROYECTOS ===== */
-        .projects {
-            display: flex;
-            gap: 25px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .card-link {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-
-        .card {
-            background: white;
-            width: 300px;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        /* Contenedor de imagen con overlay */
-        .img-container {
-            position: relative;
-            height: 200px;
-            overflow: hidden;
-        }
-
-        .card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 173, 181, 0.7);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .overlay i {
-            color: white;
-            font-size: 3rem;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-
-        .card:hover .overlay { opacity: 1; }
-        .card:hover img { transform: scale(1.1); }
-
-        .card-body {
-            padding: 20px;
-        }
-
-        .card-body h3 {
-            margin-bottom: 10px;
-        }
-
-        /* ===== CONTACTO Y FOOTER ===== */
-        .footer {
-            background-color: #222;
-            color: white;
-            text-align: center;
-            padding: 25px;
-            margin-top: 40px;
-        }
-    </style>
+    <title>Juan Carlos Abietar | Dev Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Outfit:wght@300;500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header class="header">
-        <h1>Juan Carlos Abiétar Serrano</h1>
-        <p>Desarrollador Web | Diseñador | Freelancer</p>
-    </header>
-
-    <nav class="nav">
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#contacto">Contacto</a>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">&lt;JCA /&gt;</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#stack">Tecnologías</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto" class="btn-outline">Contactar</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <section id="sobre-mi" class="section">
-        <h2>Sobre mí</h2>
-        <p>Hola 👋 Soy un desarrollador apasionado por crear páginas web modernas, funcionales y atractivas. Estudiante de DAM en el IES Leonardo Da Vinci.</p>
-    </section>
+    <header id="inicio" class="hero">
+        <div class="hero-content">
+            <span class="badge-tech">Enfocado en el rendimiento</span>
+            <h1>Juan Carlos <span class="text-gradient">Abietar</span></h1>
+            <h2>Desarrollador de Aplicaciones Multiplataforma</h2>
+            <p>Construyo soluciones integrales. Desde la lógica pura y bases de datos en el backend, hasta interfaces móviles y web rápidas y seguras.</p>
+            <div class="hero-buttons">
+                <a href="#proyectos" class="btn-primary">Explorar Proyectos</a>
+                <a href="https://github.com/juancarlos19912006-create" target="_blank" class="btn-secondary">Mi GitHub</a>
+            </div>
+        </div>
+    </header>
 
-    <section id="proyectos" class="section">
-        <h2>Proyectos</h2>
-        <div class="projects">
-            
-            <a href="https://github.com/juancarlos19912006-create" target="_blank" class="card-link">
-                <div class="card">
-                    <div class="img-container">
-                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEhUTERIWExUWFxgVFhcVGRcZGhoYGhoXFxYbFxcYICggGB0lGxgYITEhJSkrLi4uGCAzODMtOCgtLisBCgoKDg0OGhAQGyslICUrMi0vLS0tLS0tLS0tMC0vLS0tLS0uLS0vLS0tLS0tLS0tLS0tLS0tLS0tLS0vLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQYDBAcCAQj/xABDEAABBAADBAUJBQYGAgMAAAABAAIDEQQSIQUGMUETIlFhcQcWMlSBkZKx4hRCUnKhIzSywtHwM2KCk6LhFcEkQ3P/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAQIDBAYF/8QAMxEAAgECAwQHCAMBAQAAAAAAAAECAxESITEEFJGxBRUiQVFSYRM0cYGh0eHwMjNCJCP/2gAMAwEAAhEDEQA/AN3dzYP2rpP2mTJl+7mvNm7xXBTPmIPWD8H1J5EHrB+D6lcUXPvtfzciuORTvMQesH4PqTzEHrB+D6lcUTfa/m5DHIp3mIPWD8H1J5iD1g/B9SuKJvtfzchjkU7mIPWD8H1J5iD1g/B9SuKJvtfzchjkU7zEHrB+D6k8xB6wfg+pXFE32v5uQxyKd5iD1g/B9SeYg9YP8Ab+pPMQesH4PqVxRN9r+bkMcineYg9YPwfUnmIPWD8H1K4om+1/NyGORTvMQesH/b+pPMQesH4PqVxRN9r+bkMcineYg9YPwfUnmIPWD/ALf1K4om+1/NyGORTvMQesH4PqTzEHrB+D6lcUTfa/m5DHIp3mIPWD/t/UnmIPWD8H1K4om+1/NyGORTvMQesH4PqTzEHrB+D6lcUTfa/m5DHIp3mIPWD8H1LQ25uQMMeZemL6LRWWuJA45iugKC32/dH/mZ/EFpR2ytKpFOXf6Exm2zm6Ii+8dBdPJ1wn8Y/wCdXFU7ydcJ/GP+dXFed23++X73HNP+QREXIUCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAoLfb90f8AmZ/EFOqC32/dH/mZ/EFts/8AbH4otHVHN0RF6c6i6eTrhP4x/wA6uKp3k64T+Mf86uK87tv98v3uOaf8giL61trkbsVPiFQ2+uLdBhXGN5Y9xDWkVevZ7FxDeOWVrHvfiX5gQG53uc516GrOgrs0WEq6UsKNo0JOLkfoe19pcl8km8GM6kMxP2Zo6j5Ac1cmtceLR3WuzRSNeLaQ4do1Uqsm7Ip7NrNmhNM1jS57g1o4lxAA5akrHBjI36MkY8jjlcD8iuT+WHYGLEj5IZJZoJKc+FrnOyubwdk4Bug4DiFA7qjOxkjHuEo1fZN5gTw7NFWde2iNKdHEd9tFC7tbUM0Qz+k3Rx7ew+1TActY1FIylBxPSL0yMngEdGRxpWbSK2Z5RenRkLzSm4CL5feF9RO4CIiEBERAEREARfEQH1QW+37o/8AmZ/EFOqC32/dH/mZ/EFts/8AbH4otHVHN0RF6c6i6eTrhP4x/A" alt="Entrepatas">
-                        <div class="overlay"><i class="fab fa-github"></i></div>
-                    </div>
-                    <div class="card-body">
-                        <h3>ENTREPATAS</h3>
-                        <p>App para buscar paseadores de perros y adopción de mascotas.</p>
-                    </div>
+    <section id="stack" class="section bg-alt">
+        <div class="container">
+            <h3 class="section-title">01. Mi Stack Técnico</h3>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h4>Backend & Lógica</h4>
+                    <p>Java, POO, Estructuras XML, XSLT, XPath</p>
                 </div>
-            </a>
-
-            <a href="https://github.com/juancarlos19912006-create/HopeUp-app" target="_blank" class="card-link">
-                <div class="card">
-                    <div class="img-container">
-                        <img src="https://github.com/juancarlos19912006-create/juancarlos19912006-create.github.io/blob/main/HOPE-UP-Logo.png?raw=true" alt="HopeUp">
-                        <div class="overlay"><i class="fab fa-github"></i></div>
-                    </div>
-                    <div class="card-body">
-                        <h3>HOPEUP</h3>
-                        <p>Aplicación Android de apoyo para personas con depresión adolescente.</p>
-                    </div>
+                <div class="skill-card">
+                    <h4>Frontend & Móvil</h4>
+                    <p>React Native, Expo, HTML5, CSS3</p>
                 </div>
-            </a>
-
-            <a href="https://github.com/juancarlos19912006-create" target="_blank" class="card-link">
-                <div class="card">
-                    <div class="img-container">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz4Et-hE0KVXWgxyOACznOa5cTQsPHdlvcow&s" alt="IES Leonardo Da Vinci">
-                        <div class="overlay"><i class="fab fa-github"></i></div>
-                    </div>
-                    <div class="card-body">
-                        <h3>ESTUDIOS</h3>
-                        <p>Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM).</p>
-                    </div>
+                <div class="skill-card">
+                    <h4>Bases de Datos & Nube</h4>
+                    <p>Supabase, PostgreSQL, SQLite (Offline), SQL</p>
                 </div>
-            </a>
-
+                <div class="skill-card">
+                    <h4>Herramientas</h4>
+                    <p>Git, GitHub, NetBeans, Control de Versiones</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="contacto" class="section">
-        <h2>Contacto</h2>
-        <p>📧 Email: juancarlos19912006@gmail.com</p>
-        <p>🔗 LinkedIn | GitHub | Instagram</p>
+    <section id="proyectos" class="section">
+        <div class="container">
+            <h3 class="section-title">02. Proyectos Destacados</h3>
+            
+            <div class="projects-wrapper">
+                <article class="project-featured">
+                    <div class="project-content">
+                        <span class="project-overline">Aplicación Multiplataforma (AppNova S.L.)</span>
+                        <h4 class="project-title">Sistema de Auditoría para Huertos Solares</h4>
+                        <div class="project-description">
+                            <p>Desarrollo completo de una aplicación de campo para el mantenimiento de seguidores solares. Arquitectura híbrida que permite a los técnicos trabajar en zonas sin cobertura guardando los datos en local, para después sincronizarlos automáticamente con la nube mediante Supabase al recuperar la conexión. Incluye panel de control web en tiempo real para supervisores, sistema de filtros dinámicos, búsquedas universales y trazabilidad del personal.</p>
+                        </div>
+                        <ul class="project-tech-list">
+                            <li>React Native</li>
+                            <li>Supabase (PostgreSQL)</li>
+                            <li>SQLite</li>
+                            <li>JavaScript/TypeScript</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="project-standard">
+                    <div class="project-content">
+                        <span class="project-overline">Estructuración de Datos</span>
+                        <h4 class="project-title">Gestor Botánico en XML</h4>
+                        <div class="project-description">
+                            <p>Diseño de arquitectura de datos jerárquica para un registro botánico de especies arbóreas. Implementación de reglas XSLT para transformar los datos brutos en visualizaciones estructuradas, similar a los rankings de plataformas digitales.</p>
+                        </div>
+                        <ul class="project-tech-list">
+                            <li>XML</li>
+                            <li>XSLT</li>
+                            <li>XPath</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="project-standard">
+                    <div class="project-content">
+                        <span class="project-overline">Software Backend</span>
+                        <h4 class="project-title">Sistema de Gestión OOP</h4>
+                        <div class="project-description">
+                            <p>Desarrollo de lógica de negocio orientada a objetos. Aplicación de principios SOLID, herencia, encapsulamiento y polimorfismo para garantizar un código escalable y fácil de mantener.</p>
+                        </div>
+                        <ul class="project-tech-list">
+                            <li>Java</li>
+                            <li>NetBeans</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
     </section>
 
-    <footer class="footer">
-        <p>© 2026 - Juan Carlos Abiétar | Desarrollado con ❤️</p>
+    <section id="contacto" class="section bg-alt text-center">
+        <div class="container contact-container">
+            <h3 class="section-title">03. ¿Hablamos?</h3>
+            <p class="contact-text">Busco constantemente nuevos retos técnicos donde pueda aplicar mis conocimientos en DAM y seguir evolucionando profesionalmente. Si tu equipo necesita a alguien comprometido y con capacidad de resolución de problemas técnicos reales, me encantaría conectar.</p>
+            <a href="mailto:tuemail@ejemplo.com" class="btn-primary">Enviar un mensaje</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>Diseñado y desarrollado por Juan Carlos Abietar &copy; 2026</p>
     </footer>
 
 </body>
 </html>
-<style>
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Header */
-.header {
-    background-color: #222;
-    color: #fff;
-    text-align: center;
-    padding: 40px 20px;
-}
-
-/* Navegación */
-.nav {
-    background-color: #333;
-    text-align: center;
-    padding: 10px;
-}
-
-.nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-.nav a:hover {
-    color: #00adb5;
-}
-
-/* Secciones */
-.section {
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.section h2 {
-    margin-bottom: 20px;
-    color: #00adb5;
-}
-
-/* Proyectos */
-.projects {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    }
-
-    /* Ajuste de las imágenes dentro de las tarjetas */
-.card img {
-    width: 100%;          /* Que ocupe todo el ancho de la card */
-    height: 200px;        /* Altura fija para que todas sean iguales */
-    object-fit: cover;    /* Recorta la imagen para que llene el espacio sin deformarse */
-    border-radius: 4px;   /* Un toque estético para las esquinas */
-    display: block;       /* Evita espacios extra en la base */
-    margin-bottom: 15px;  /* Separa la imagen del texto de abajo */
-
-}
-
-.card {
-    background: white;
-    padding: 20px;
-    width: 300px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-/* Footer */
-.footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 40px;
-}
-    /* ===== ANIMACIONES GENERALES ===== */
-
-/* Fade in + slide */
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Header animado al cargar */
-.header {
-    animation: fadeUp 1s ease-out;
-}
-
-/* Secciones con animación */
-.section {
-    animation: fadeUp 1s ease-out;
-}
-
-/* ===== NAV MODERNA ===== */
-
-.nav a {
-    position: relative;
-    padding-bottom: 5px;
-}
-
-/* Subrayado animado */
-.nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0%;
-    height: 2px;
-    background-color: #00adb5;
-    transition: width 0.3s ease;
-}
-
-.nav a:hover::after {
-    width: 100%;
-}
-
-/* ===== TARJETAS DE PROYECTOS ===== */
-
-.card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Elevación al pasar el ratón */
-.card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-/* Zoom suave en imágenes */
-.card img {
-    transition: transform 0.4s ease;
-}
-
-.card:hover img {
-    transform: scale(1.05);
-}
-
-/* ===== BOTONES / LINKS ===== */
-
-a {
-    transition: color 0.3s ease;
-}
-
-/* ===== FOOTER SUAVE ===== */
-
-.footer {
-    animation: fadeUp 1.2s ease-out;
-}
-
-    /* ===== FONDO ANIMADO ===== */
-
-body {
-    background: linear-gradient(
-        -45deg,
-        #0f2027,
-        #203a43,
-        #2c5364,
-        #00adb5
-    );
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-    color: #333;
-}
-
-/* Animación del fondo */
-@keyframes gradientBG {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-.section {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    margin-bottom: 40px;
-}
-.header {
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(6px);
-}
-
-
-</style>
