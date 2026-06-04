@@ -240,7 +240,20 @@ body {
 .projects-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 40px;
+}
+
+/* 🌟 NUEVO: Envoltorio para que toda la tarjeta sea un enlace */
+.project-link-wrapper {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+
+.project-link-wrapper:hover {
+    transform: translateY(-8px);
 }
 
 .project-featured {
@@ -250,6 +263,12 @@ body {
     padding: 40px;
     position: relative;
     overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.project-link-wrapper:hover .project-featured {
+    border-color: var(--accent-cyan);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .project-featured::before {
@@ -262,17 +281,37 @@ body {
     background-color: var(--accent-cyan);
 }
 
+/* 🌟 NUEVO: Flexbox para alinear el título y el logo */
+.project-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+/* 🌟 NUEVO: Estilos del Logo de Tornasol */
+.project-logo {
+    height: 45px;
+    width: auto;
+    border-radius: 8px;
+    opacity: 0.9;
+}
+
 .project-overline {
     font-family: var(--font-mono);
     color: var(--accent-cyan);
     font-size: 0.9rem;
-    margin-bottom: 10px;
     display: block;
 }
 
 .project-title {
     font-size: 2rem;
     margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.project-link-wrapper:hover .project-title {
+    color: var(--accent-cyan);
 }
 
 .project-description {
@@ -294,8 +333,15 @@ body {
 }
 
 .project-standard {
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 40px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    padding: 30px;
+    transition: border-color 0.3s ease;
+}
+
+.project-link-wrapper:hover .project-standard {
+    border-color: var(--accent-cyan);
 }
 
 /* Contacto */
@@ -329,4 +375,5 @@ footer {
     .hero h2 { font-size: 1.5rem; }
     .nav-links { display: none; }
     .project-featured { padding: 25px; }
+    .project-logo { height: 35px; }
 }
