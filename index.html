@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan Carlos Abietar | Dev Portfolio</title>
+    <!-- Tipografía técnica y moderna -->
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Outfit:wght@300;500;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+    <!-- Navegación -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">&lt;JCA /&gt;</div>
@@ -21,6 +23,7 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <header id="inicio" class="hero">
         <div class="hero-content">
             <span class="badge-tech">Enfocado en el rendimiento</span>
@@ -34,6 +37,7 @@
         </div>
     </header>
 
+    <!-- Stack Tecnológico -->
     <section id="stack" class="section bg-alt">
         <div class="container">
             <h3 class="section-title">01. Mi Stack Técnico</h3>
@@ -58,59 +62,94 @@
         </div>
     </section>
 
+    <!-- Proyectos -->
     <section id="proyectos" class="section">
         <div class="container">
-            <h3 class="section-title">02. Proyectos Destacados</h3>
+            <h3 class="section-title">02. Mis Repositorios</h3>
             
             <div class="projects-wrapper">
-                <article class="project-featured">
-                    <div class="project-content">
-                        <span class="project-overline">Aplicación Multiplataforma (AppNova S.L.)</span>
-                        <h4 class="project-title">Sistema de Auditoría para Huertos Solares</h4>
-                        <div class="project-description">
-                            <p>Desarrollo completo de una aplicación de campo para el mantenimiento de seguidores solares. Arquitectura híbrida que permite a los técnicos trabajar en zonas sin cobertura guardando los datos en local, para después sincronizarlos automáticamente con la nube mediante Supabase al recuperar la conexión. Incluye panel de control web en tiempo real para supervisores, sistema de filtros dinámicos, búsquedas universales y trazabilidad del personal.</p>
+                
+                <!-- 🌟 PROYECTO PRINCIPAL: HUERTO SOLAR -->
+                <a href="https://github.com/juancarlos19912006-create/mantenimiento_huerto_solar" target="_blank" class="project-link-wrapper">
+                    <article class="project-featured">
+                        <div class="project-content">
+                            <div class="project-header-flex">
+                                <span class="project-overline">Aplicación Multiplataforma (AppNova S.L.)</span>
+                                <!-- Aquí añadimos el logo de Tornasol -->
+                                <img src="logo_tornasol.png" alt="Logo Grupo Tornasol" class="project-logo">
+                            </div>
+                            <h4 class="project-title">Sistema de Auditoría para Huertos Solares</h4>
+                            <div class="project-description">
+                                <p>Desarrollo completo de una aplicación de campo para el mantenimiento de seguidores solares. Arquitectura híbrida que permite a los técnicos trabajar en zonas sin cobertura guardando los datos en local, para después sincronizarlos automáticamente con la nube mediante Supabase al recuperar la conexión. Incluye panel de control web en tiempo real para supervisores, sistema de filtros dinámicos, búsquedas universales y trazabilidad del personal.</p>
+                            </div>
+                            <ul class="project-tech-list">
+                                <li>React Native</li>
+                                <li>Supabase (PostgreSQL)</li>
+                                <li>SQLite</li>
+                                <li>TypeScript</li>
+                            </ul>
                         </div>
-                        <ul class="project-tech-list">
-                            <li>React Native</li>
-                            <li>Supabase (PostgreSQL)</li>
-                            <li>SQLite</li>
-                            <li>JavaScript/TypeScript</li>
-                        </ul>
-                    </div>
-                </article>
+                    </article>
+                </a>
 
-                <article class="project-standard">
-                    <div class="project-content">
-                        <span class="project-overline">Estructuración de Datos</span>
-                        <h4 class="project-title">Gestor Botánico en XML</h4>
-                        <div class="project-description">
-                            <p>Diseño de arquitectura de datos jerárquica para un registro botánico de especies arbóreas. Implementación de reglas XSLT para transformar los datos brutos en visualizaciones estructuradas, similar a los rankings de plataformas digitales.</p>
+                <!-- 🌟 NUEVO PROYECTO: HOPEUP -->
+                <a href="https://github.com/juancarlos19912006-create/HopeUp" target="_blank" class="project-link-wrapper">
+                    <article class="project-standard">
+                        <div class="project-content">
+                            <span class="project-overline">Aplicación Móvil / Salud y Bienestar</span>
+                            <h4 class="project-title">HopeUp - Salud Mental</h4>
+                            <div class="project-description">
+                                <p>Aplicación orientada al apoyo y seguimiento de la salud mental. Diseñada con interfaces accesibles y amigables para ofrecer un entorno seguro al usuario, facilitando el registro emocional y el acceso a recursos de bienestar desde dispositivos móviles.</p>
+                            </div>
+                            <ul class="project-tech-list">
+                                <li>React Native</li>
+                                <li>UX/UI Design</li>
+                                <li>Gestión de Estado</li>
+                            </ul>
                         </div>
-                        <ul class="project-tech-list">
-                            <li>XML</li>
-                            <li>XSLT</li>
-                            <li>XPath</li>
-                        </ul>
-                    </div>
-                </article>
+                    </article>
+                </a>
 
-                <article class="project-standard">
-                    <div class="project-content">
-                        <span class="project-overline">Software Backend</span>
-                        <h4 class="project-title">Sistema de Gestión OOP</h4>
-                        <div class="project-description">
-                            <p>Desarrollo de lógica de negocio orientada a objetos. Aplicación de principios SOLID, herencia, encapsulamiento y polimorfismo para garantizar un código escalable y fácil de mantener.</p>
+                <!-- PROYECTO 3 -->
+                <a href="https://github.com/juancarlos19912006-create/gestor-botanico-xml" target="_blank" class="project-link-wrapper">
+                    <article class="project-standard">
+                        <div class="project-content">
+                            <span class="project-overline">Estructuración de Datos</span>
+                            <h4 class="project-title">Gestor Botánico en XML</h4>
+                            <div class="project-description">
+                                <p>Diseño de arquitectura de datos jerárquica para un registro botánico de especies arbóreas. Implementación de reglas XSLT para transformar los datos brutos en visualizaciones estructuradas.</p>
+                            </div>
+                            <ul class="project-tech-list">
+                                <li>XML</li>
+                                <li>XSLT</li>
+                                <li>XPath</li>
+                            </ul>
                         </div>
-                        <ul class="project-tech-list">
-                            <li>Java</li>
-                            <li>NetBeans</li>
-                        </ul>
-                    </div>
-                </article>
+                    </article>
+                </a>
+
+                <!-- PROYECTO 4 -->
+                <a href="https://github.com/juancarlos19912006-create/sistema-gestion-oop" target="_blank" class="project-link-wrapper">
+                    <article class="project-standard">
+                        <div class="project-content">
+                            <span class="project-overline">Software Backend</span>
+                            <h4 class="project-title">Sistema de Gestión OOP</h4>
+                            <div class="project-description">
+                                <p>Desarrollo de lógica de negocio orientada a objetos. Aplicación de principios SOLID, herencia, encapsulamiento y polimorfismo para garantizar un código escalable y fácil de mantener.</p>
+                            </div>
+                            <ul class="project-tech-list">
+                                <li>Java</li>
+                                <li>NetBeans</li>
+                            </ul>
+                        </div>
+                    </article>
+                </a>
+
             </div>
         </div>
     </section>
 
+    <!-- Contacto -->
     <section id="contacto" class="section bg-alt text-center">
         <div class="container contact-container">
             <h3 class="section-title">03. ¿Hablamos?</h3>
@@ -119,6 +158,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>Diseñado y desarrollado por Juan Carlos Abietar &copy; 2026</p>
     </footer>
